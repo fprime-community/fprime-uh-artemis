@@ -41,6 +41,9 @@ include("${FPRIME_FRAMEWORK_PATH}/cmake/FPrime-Code.cmake")
 
 # Add Topology subdirectory
 add_fprime_subdirectory("${CMAKE_CURRENT_LIST_DIR}/Top/")
+add_fprime_subdirectory("${FPRIME_PROJECT_ROOT}/Telecom/RFM23")
+include_directories("${FPRIME_PROJECT_ROOT}/lib/RadioHead")    #point to where the radio head libraries are
+add_fprime_subdirectory("${FPRIME_PROJECT_ROOT}/lib")
 
 set(SOURCE_FILES "${CMAKE_CURRENT_LIST_DIR}/Main.cpp")
 set(MOD_DEPS ${PROJECT_NAME}/Top)
